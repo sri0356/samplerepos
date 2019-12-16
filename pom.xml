@@ -18,6 +18,32 @@
 
 	<build>
 		<plugins>
+		
+       <plugin>
+        <groupId>org.mule.tools.maven</groupId>
+        <artifactId>mule-maven-plugin</artifactId>
+        <configuration>
+          <deploymentType>cloudhub</deploymentType>
+          <muleVersion>3.9.3</muleVersion>
+          <username>sri2580</username>
+          <password>Sri@944156</password>
+          <applicationName>sample25</applicationName>
+          <environment>sandbox</environment>
+          <region>us-east-1</region>
+          <uri>https://anypoint.mulesoft.com</uri>
+          <workerType>MICRO</workerType>
+          <workers>1</workers>
+        </configuration>
+        <executions>
+          <execution>
+            <id>deploy</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-app-maven-plugin</artifactId>
